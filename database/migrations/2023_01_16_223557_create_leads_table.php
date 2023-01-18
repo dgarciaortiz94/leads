@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('status')->constrained('lead_status');
             $table->string('title', 255);
             $table->dateTime('created_at');
-            $table->dateTime('closed_at');
+            $table->dateTime('closed_at')->nullable();
         });
     }
 

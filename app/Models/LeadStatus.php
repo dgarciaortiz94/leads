@@ -9,6 +9,9 @@ class LeadStatus extends Model
 {
     use HasFactory;
 
+    protected $table = 'lead_status';
+    public $timestamps = false;
+
     /**
      * The attributes that are mass assignable.
      *

@@ -23,9 +23,9 @@ class LeadStatus extends Model
 
 
     /**
-     * Get the user that owns the phone.
+     * Get the lead that owns the phone.
      */
-    public function user()
+    public function lead()
     {
         return $this->belongsTo(Lead::class);
     }

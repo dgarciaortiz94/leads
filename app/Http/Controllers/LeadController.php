@@ -41,7 +41,7 @@ class LeadController extends Controller
 
         $leads = $queryBuilder->orderBy('created_at', 'desc')->get();
 
-        return $leads[0]->lead;
+        return $leads;
     }
 
     /**

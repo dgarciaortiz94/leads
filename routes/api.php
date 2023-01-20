@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\LeadStatusController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,11 @@ Route::controller(LeadController::class)->group(function () {
     Route::get('/leads', 'index');
     Route::post('/leads', 'store');
     Route::get('/leads/{id}', 'show');
-    Route::patch('/leads/{id}', 'update');
+    Route::put('/leads/{id}', 'update');
     Route::delete('/leads/{id}', 'destroy');
+    Route::patch('/leads/close-leads', 'closeLeads');
+});
+
+Route::controller(LeadStatusController::class)->group(function () {
+    Route::get('/lead-status', 'index');
 });
